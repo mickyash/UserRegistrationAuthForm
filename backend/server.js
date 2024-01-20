@@ -1,14 +1,26 @@
 require('./config/db');
 const cors = require('cors');
-const bodyParser = require('express');
 
 const app = require('express')();
 const port = process.env.PORT ||5000;
 
 app.use(cors());
 
-app.use(bodyParser.json());
 
+
+
+
+const corsOptions = {
+    origin: 'https://user-registration-auth-form-e28x.vercel.app',
+    methods: 'POST,GET',
+    credentials: true,
+  };
+  
+  app.use(cors(corsOptions));
+
+
+const bodyParser = require('express').json;
+app.use(bodyParser());
 
 
 
@@ -17,10 +29,7 @@ app.use('/user',UserRouter)
 
 
 
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something went wrong!');
-  });
+
 
 
 app.listen(port, ()=>{
