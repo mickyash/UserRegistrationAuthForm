@@ -21,10 +21,6 @@ app.use(bodyParser());
 app.use('/user',UserRouter)
 
 
-app.get('/',(res,req)=>{
-    res.json("hello");
-})
-
 
 app.listen(port, ()=>{
     console.log(`server runnign on port ${port}`)
