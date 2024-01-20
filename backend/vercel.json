@@ -9,8 +9,10 @@
             "dest": "/"
         }
     ],
-    "headers": [
-        { "source": "/user/signup", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] }
+    "headers":[
+        { 
+            "source": "/user/signup", 
+            "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] }
     ]
    
       
