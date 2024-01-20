@@ -4,12 +4,7 @@ const app = require('express')();
 const port = process.env.PORT ||5000;
 
 const cors = require('cors');
-app.use(cors({
-    origin:["https://user-registration-auth-form-e28x.vercel.app/"],
-    methods:["POST","GET"],
-    credentials:true
-}
-));
+app.use(cors());
 
 const UserRouter = require('./api/user')
 
