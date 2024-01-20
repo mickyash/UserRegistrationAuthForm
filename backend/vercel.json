@@ -11,7 +11,7 @@
     ],
     "headers":[
         { 
-            "source": "/user/signup", 
+            "source": "/api/user/signup", 
             "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] }
     ]
    
