@@ -7,6 +7,21 @@ const port = process.env.PORT ||5000;
 app.use(cors());
 
 
+const corsOptions = {
+    origin: 'https://user-registration-auth-form-e28x.vercel.app',
+    methods: 'POST,GET',
+    credentials: true,
+  };
+
+app.use(cors(corsOptions));
+
+
+
+const bodyParser = require('express').json;
+app.use(bodyParser());
+
+
+
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://user-registration-auth-form-e28x.vercel.app');
     res.setHeader('Access-Control-Allow-Methods', 'POST, GET');
@@ -14,21 +29,7 @@ app.use((req, res, next) => {
     next();
   });
 
-app.use(cors(corsOptions));
 
-app.options('/user/signup', cors(corsOptions)); 
-
-// const corsOptions = {
-//     origin: 'https://user-registration-auth-form-e28x.vercel.app',
-//     methods: 'POST,GET',
-//     credentials: true,
-//   };
-  
-  app.use(cors(corsOptions));
-
-
-const bodyParser = require('express').json;
-app.use(bodyParser());
 
 
 
