@@ -16,6 +16,7 @@ app.use((req, res, next) => {
 
 app.use(cors(corsOptions));
 
+app.options('/user/signup', cors(corsOptions)); 
 
 // const corsOptions = {
 //     origin: 'https://user-registration-auth-form-e28x.vercel.app',
