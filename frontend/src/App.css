@@ -1,0 +1,48 @@
+
+*{
+  box-sizing: border-box;
+}
+
+.maindiv{
+  display: flex;
+  justify-content: center;
+  margin-top: 8em;
+}
+
+
+
+.signupform{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  border: none;
+}
+.signupform button{
+  margin-top: 1em;
+  height:2em ;
+  width: 9em;
+}
+
+.ipvalue input{
+  margin-top: 1em;
+  border: none;
+  background-color:#eee;
+  border-radius: 10px;
+  height: 3em;
+  width: 28em;
+}
+
+.links {
+  text-decoration: none;
+  margin-top: 1em;
+  color: black;
+
+}
+.links link{
+  text-decoration: none;
+}
+
+
