@@ -25,7 +25,7 @@ export const SignupPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setbuttontext("Loading...");
-    // let response = await fetch("http://localhost:8000/user/signup", {
+    
     let response = await fetch("https://user-registration-auth-form.vercel.app/user/signup", {
 
 
