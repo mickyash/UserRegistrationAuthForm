@@ -1,5 +1,11 @@
 {
     "version": 2,
+    "headers": [
+        { 
+          "source": "/api/user/signup", 
+          "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
+        }
+      ],
     "builds": [
       { "src": "*.js", "use": "@vercel/node" }
     ],
@@ -8,12 +14,7 @@
         "src": "/(.*)",
         "dest": "/"
       }
-    ],
-    "headers": [
-      { 
-        "source": "/api/user/signup", 
-        "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
-      }
     ]
+    
   }
   
