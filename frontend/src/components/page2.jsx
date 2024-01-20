@@ -32,7 +32,7 @@ const Page = () => {
     const handleSubmit = async (e) =>{
         e.preventDefault();
         setbuttontext('login...');
-        let response = await fetch ("http://localhost:8000/user/signin",{
+        let response = await fetch ("https://user-registration-auth-form.vercel.app/user/signin",{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
