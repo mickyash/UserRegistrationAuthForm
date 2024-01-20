@@ -8,8 +8,9 @@
         "dest": "/api/$1"
       }
     ],
-    "headers": [
-      { "source": "/api/user/signup", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] }
+    
+    "builds": [
+      { "src": "*.js", "use": "@vercel/node" }
     ]
   }
   
