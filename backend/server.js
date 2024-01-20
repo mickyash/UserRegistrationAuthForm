@@ -7,6 +7,7 @@ const cors = require('cors');
 app.use(cors({
     origin:["https://user-registration-auth-form-e28x.vercel.app/"],
     methods:["POST","GET"],
+    credentials:true
     
 }));
 
