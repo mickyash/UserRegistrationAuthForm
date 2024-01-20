@@ -8,8 +8,8 @@ app.use(cors({
     origin:["https://user-registration-auth-form-e28x.vercel.app/"],
     methods:["POST","GET"],
     credentials:true
-    
-}));
+}
+));
 
 const UserRouter = require('./api/user')
 
