@@ -1,20 +1,18 @@
-{
+
+  
+  {
     "version": 2,
-    "headers": [
-        { 
-          "source": "/api/user/signup", 
-          "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
-        }
-      ],
-    "builds": [
-      { "src": "*.js", "use": "@vercel/node" }
-    ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "/"
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
       }
+    ],
+    "headers": [
+      { "source": "/api/user/signup", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] }
+    ],
+    "builds": [
+      { "src": "*.js", "use": "@vercel/node" }
     ]
-    
   }
   
