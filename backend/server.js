@@ -1,12 +1,12 @@
 require('./config/db');
-const cors = require('cors');
+// const cors = require('cors');
 
 
 
 const app = require('express')();
 const port = process.env.PORT ||5000;
 
-app.use(cors());
+// app.use(cors());
 
 
 // const corsOptions = {
