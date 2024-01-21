@@ -11,6 +11,23 @@ const port = process.env.PORT ||5000;
 app.use(cors());
 
 
+const allowedOrigins = ['https://user-registration-auth-formm.vercel.app'];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    methods: 'POST, GET',
+    credentials: true,
+  })
+);
+
+
 // const corsOptions = {
 //     origin: 'https://user-registration-auth-form-e28x.vercel.app',
 //     methods: 'POST,GET',
