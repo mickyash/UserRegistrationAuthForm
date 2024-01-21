@@ -1,7 +1,6 @@
 const express = require("express");
-const cors = require('cors');
+// const cors = require('cors');
 
-app.use(cors());
 
 const router = express.Router();
 
@@ -23,13 +22,14 @@ require("dotenv").config();
 
 const app = express();
 
+// app.use(cors());
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, GET');
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.setHeader('Access-Control-Allow-Methods', 'POST, GET');
+//   res.setHeader('Access-Control-Allow-Credentials', 'true');
+//   next();
+// });
 
 
 app.use(express.json()); // for parsing application/json

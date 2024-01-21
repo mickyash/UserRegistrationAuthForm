@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Page from "./page2";
 import {Link} from "react-router-dom"
 
 export const SignupPage = () => {
