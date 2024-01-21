@@ -157,7 +157,7 @@ router.post("/signup", (req, res) => {
 });
 
 const sendVerificationEmail = ({ _id, email }, res) => {
-  const currentUrl = 'https://user-registration-auth-form-e28x.vercel.app/';
+  const currentUrl = 'https://user-registration-auth-formm.vercel.app/';
   // const currentUrl = 'http://localhost:8000/';
 
 
