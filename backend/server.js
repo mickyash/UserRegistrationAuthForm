@@ -1,11 +1,12 @@
 require('./config/db');
 const cors = require('cors');
-app.use(cors());
+
 
 
 const app = require('express')();
 const port = process.env.PORT ||5000;
 
+app.use(cors());
 
 
 const corsOptions = {
@@ -16,6 +17,11 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+
+app.use(express.static(path.join(__dirname)))
+app.get('*',function(req,res){
+  res.sendFile(path.join(__dirname, '../frontend/index.html'))
+})
 
 
 const bodyParser = require('express').json;
