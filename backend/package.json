@@ -4,8 +4,7 @@
   "description": "login server for cardrop",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "build":"npm run build"
+    "start": "node server.js"
   },
   "author": "Yash Sharma",
   "license": "ISC",
