@@ -28,32 +28,17 @@ app.use(
 );
 
 
-// const corsOptions = {
-//     origin: 'https://user-registration-auth-form-e28x.vercel.app',
-//     methods: 'POST,GET',
-//     credentials: true,
-//   };
 
-// app.use(cors(corsOptions));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
-
-app.use(express.static(path.join(__dirname)))
-app.get('*',function(req,res){
-  res.sendFile(path.join(__dirname, '../frontend/index.html'))
-})
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
 
 
 const bodyParser = require('express').json;
 app.use(bodyParser());
 
-
-
-// app.use((req, res, next) => {
-//     res.setHeader('Access-Control-Allow-Origin', 'https://user-registration-auth-form-e28x.vercel.app');
-//     res.setHeader('Access-Control-Allow-Methods', 'POST, GET');
-//     res.setHeader('Access-Control-Allow-Credentials', 'true');
-//     next();
-//   });
 
 
 
