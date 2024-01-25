@@ -7,10 +7,6 @@
         "src": "/api/(.*)",
         "dest": "/api/$1"
       }
-    ],
-    
-    "builds": [
-      { "src": "*.js", "use": "@vercel/node" }
     ]
   }
   
