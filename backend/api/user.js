@@ -36,7 +36,8 @@ app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true }));
 
 
-// app.use(express.static('../frontend'));
+app.use(express.static(path.join(__dirname, '../frontend')));
+
 
 //path for static verified page
 const path = require("path");
